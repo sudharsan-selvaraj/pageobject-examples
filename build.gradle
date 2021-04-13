@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useTestNG()
+}
+
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    compile group: 'com.github.webdriverextensions', name: 'webdriverextensions', version: '3.11.2'
+    compile group: 'org.testng', name: 'testng', version: '7.1.0'
+    compile group : 'io.github.bonigarcia', name: 'webdrivermanager', version: '4.4.0'
+}
