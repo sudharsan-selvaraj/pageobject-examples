@@ -8,9 +8,9 @@ import java.util.Arrays;
 
 public class BasePage {
 
-    public Interactions interactions;
+    protected Interactions interactions;
     protected WebDriver driver;
-    public ScriptHelper scriptHelper;
+    protected ScriptHelper scriptHelper;
 
     public BasePage(ScriptHelper scriptHelper) {
         this.scriptHelper = scriptHelper;

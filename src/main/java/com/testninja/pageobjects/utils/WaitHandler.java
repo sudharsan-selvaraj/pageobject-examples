@@ -16,6 +16,10 @@ public class WaitHandler {
         this.driver = driver;
     }
 
+    public void waitFor(ExpectedCondition condition) {
+        new WebDriverWait(driver, defaultWaitTime).until(condition);
+    }
+
     public WebElement waitForElementToDisplay(WebElement webElement) {
         return waitForElementToDisplay(webElement, defaultWaitTime);
     }

@@ -2,6 +2,7 @@ package com.testninja.pageobjects.wrappers;
 
 import com.github.webdriverextensions.WebComponent;
 import com.testninja.pageobjects.utils.Interactions;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -27,6 +28,10 @@ public class BaseWebComponent extends WebComponent {
 
     public WebDriver getDriver() {
         return scriptHelper.getDriver();
+    }
+
+    protected static By getChildByTestId(String testId) {
+        return By.cssSelector("[data-testid='" + testId + "']");
     }
 
 }
